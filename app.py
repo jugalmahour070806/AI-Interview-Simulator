@@ -20,8 +20,7 @@ from report_generator import generate_report, export_report
 # ---------------- PAGE CONFIG ----------------
 
 st.set_page_config(
-    page_title="AI Interview Pro",
-    page_icon="🎯",
+    page_title="IntervAI",
     layout="wide"
 )
 
@@ -138,7 +137,7 @@ if "answers" not in st.session_state:
 # ---------------- SIDEBAR ----------------
 
 with st.sidebar:
-    st.title("🎯 Interview Setup")
+    st.title("Interview Setup")
 
     name = st.text_input("Candidate Name", "Candidate")
 
@@ -169,7 +168,7 @@ with st.sidebar:
 
 st.markdown("""
 <div class="hero">
-<h1>🎯 AI Interview Pro</h1>
+<h1>IntervAI</h1>
 <p>Smart Interview Practice and Performance Analysis</p>
 </div>
 """, unsafe_allow_html=True)
@@ -186,10 +185,10 @@ st.write(
 cards = st.columns(4)
 
 modules = [
-    ("🎙️ Voice Interviewer", "Voice-based interview practice"),
-    ("📊 Confidence Analysis", "Speaking pattern analysis"),
-    ("🧍 Body Language", "Webcam face detection"),
-    ("🧠 Answer Accuracy", "Technical keyword evaluation")
+    ("Voice Interviewer", "Voice-based interview practice"),
+    ("Confidence Analysis", "Speaking pattern analysis"),
+    ("Body Language", "Webcam face detection"),
+    ("Answer Accuracy", "Technical keyword evaluation")
 ]
 
 for col, (title, desc) in zip(cards, modules):
@@ -210,10 +209,10 @@ st.write("")
 # ---------------- TABS ----------------
 
 tab1, tab2, tab3, tab4 = st.tabs([
-    "🎙️ Voice Interview",
-    "📊 Confidence Analysis",
-    "🧍 Body Language",
-    "🧠 Answer Accuracy"
+    "Voice Interview",
+    "Confidence Analysis",
+    "Body Language",
+    "Answer Accuracy"
 ])
 
 
@@ -234,7 +233,7 @@ duration_key = f"audio_duration_{st.session_state.question_no}"
 
 with tab1:
 
-    st.subheader("🎙️ AI Voice Interviewer")
+    st.subheader("AI Voice Interviewer")
 
     st.markdown(
         f"""
@@ -397,7 +396,7 @@ with tab1:
 
 with tab2:
 
-    st.subheader("📊 Confidence Analysis")
+    st.subheader("Confidence Analysis")
 
     if not st.session_state.answers:
 
@@ -510,7 +509,7 @@ with tab2:
 
 with tab3:
 
-    st.subheader("🧍 Body Language & Posture Detection")
+    st.subheader("Body Language & Posture Detection")
 
     st.write(
         "Capture a webcam image to check face visibility and framing."
@@ -565,7 +564,7 @@ with tab3:
 
 with tab4:
 
-    st.subheader("🧠 Answer Accuracy & Technical Knowledge")
+    st.subheader("Answer Accuracy & Technical Knowledge")
 
     if not st.session_state.answers:
 
